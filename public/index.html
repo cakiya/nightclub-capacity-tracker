@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="en" style="font-family: Segoe UI">
+<head>
+  <meta charset="utf-8">
+  <title>Web Assignment 0</title>
+  <meta name="description" content="First web assignment">
+  <meta name="author" content="student name">
+  <script>
+    function updateInfo() {
+        const clubInfo = {
+            "Club Arcane": {
+                location: "London",
+                capacity: "500",
+                theme: "Rock",
+                textColor: "White",
+                backgroundColor: "Black"
+            },
+            "Club Underground": {
+                location: "Los Angeles",
+                capacity: "300",
+                theme: "Electronic",
+                textColor: "#FFFF00",
+                backgroundColor: "#000000"
+            },
+            "Club Soda": {
+                location: "Chicago",
+                capacity: "400",
+                theme: "Jazz",
+                textColor: "Black",
+                backgroundColor: "White"
+            },
+            "Studio 52": {
+                location: "Miami",
+                capacity: "250",
+                theme: "Hip-Hop",
+                textColor: "#FFFFFF",
+                backgroundColor: "#800080"
+            },
+            "Ciro's": {
+                location: "San Francisco",
+                capacity: "350",
+                theme: "Mafioso",
+                textColor: "Blue",
+                backgroundColor: "White"
+            },
+            "Paradisio Garage": {
+                location: "Rochester",
+                capacity: "600",
+                theme: "Disco",
+                textColor: "#FFFFFF",
+                backgroundColor: "#FF69B4"
+            }
+        }; 
+
+        let x = document.getElementsByName("clubs")[0]; 
+        let club = x.options[x.selectedIndex].text;
+        
+        let box = document.getElementsByName("info")[0];
+        let info = clubInfo[club];
+        box.innerText = `Name: ${club}\n
+            Location: ${info.location}\n
+            Capacity: ${info.capacity}\n
+            Theme: ${info.theme}`;
+        box.style.color = info.textColor;
+        box.style.backgroundColor = info.backgroundColor;
+    }
+  </script>
+</head>
+<body>
+    <h1 style="
+            font-style: bold;
+            font-family: Verdana;
+            font-size: 36px;
+            text-align: center;
+            "
+        >SWEN-344 Web Assignment 0</h1>
+        <h2 style="
+            font-family: Impact;
+            text-align: center;
+            "
+        >Section 01</h2>
+    <div style="
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;">
+        <select name="clubs"onchange=updateInfo()>
+            <option value=""></option>
+            <option value="Club Arcane">Club Arcane</option>
+            <option value="Club Underground">Club Underground</option>
+            <option value="Club Soda">Club Soda</option>
+            <option value="Studio 52">Studio 52</option>
+            <option value="Ciro's">Ciro's</option>
+            <option value="Paradisio Garage">Paradisio Garage</option>
+        </select>
+        <textarea name="info" style="width: 45vw; height: 60px;">
+            
+        </textarea>
+    </div>
+</body>
+</html>

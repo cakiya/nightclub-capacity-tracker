@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Nightclub Capacity Tracker</title>
+  <meta name="description" content="Client 1">
+  <meta name="author" content="Alex Gu">
+  <link rel="stylesheet" href="clubs.css">
+  <script src="clubs.js"></script>
+</head>
+<body>
+  <div id="header">
+    <h1>Nightclub Capacity Tracker</h1>
+    <h3>Each time someone enters/ leaves the club, select the correct club and click the appropriate button</h3>
+  </div>
+  <div id="buttons">
+    <div>
+      <div id="arcane box">
+        <text>Club Arcane</text>
+        <!-- <br>
+        <element id="arcane status">Welcome!</element> -->
+      </div>
+      <h1 id="arcane count">0</h1>
+    </div>
+    <div>
+      <div id="paradisio box">
+        <text>Club Paradisio</text>
+        <!-- <br>
+        <element id="paradisio status">Welcome!</element> -->
+      </div>
+      <h1 id="paradisio count">0</h1>
+    </div>
+    <div>
+      <div id="underground box">
+        <text>Club Underground</text>
+        <!-- <br>
+        <element id="underground status">Welcome!</element> -->
+      </div>
+      <h1 id="underground count">0</h1>
+    </div>
+    <div>
+      <div id="soda box">
+        <text>Club Soda</text>
+        <!-- <br>
+        <element id="soda status">Welcome!</element> -->
+      </div>
+      <h1 id="soda count">0</h1>
+    </div>
+  </div>
+  <div id="selection">
+    <div id="choices">
+      <input type="radio" id='n1' name="choice" value="arcane">
+      <label for="n1">Club Arcane</label><br>
+      <input type="radio" id='n2' name="choice" value="paradisio">
+      <label for="n2">Club Paradisio</label><br>
+      <input type="radio" id='n3' name="choice" value="underground">
+      <label for="n3">Club Underground</label><br>
+      <input type="radio" id='n4' name="choice" value="soda">
+      <label for="n4">Club Soda</label><br>
+    </div>
+    <div>
+      <button id="add" onclick="add(1)">+</button>
+      <button id="sub" onclick="add(-1)">-</button>
+    </div>
+  </div>
+</body>
+</html>

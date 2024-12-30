@@ -1,0 +1,47 @@
+body * {
+  font-style: bold;
+  font-family: 'Segoe UI';
+  text-align: center;
+}
+
+body {
+  background-color:beige;
+}
+
+#statuses {
+  flex-direction: row;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+#statuses > div{
+  padding: 5px;
+}
+
+#statuses > div > div{
+  border-radius: 25px;
+  border-style: outset;
+  background-color:aquamarine;
+  padding: 20px;
+  width: 200px;
+  height: 150px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+#selection {
+  text-align: center;
+}
+
+#selection > #choices {
+  display: inline-block;
+  text-align: left;
+}
+
+#selection > div > button {
+  width: 60px;
+  margin: 10px;
+}
